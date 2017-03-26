@@ -1,0 +1,42 @@
+---
+output: rmarkdown::github_document
+---
+
+`bismer` : Generate Shakespearean insults
+
+The following functions are implemented:
+
+- `insult`: Generate a Shakespearean insult
+
+### Installation
+
+```{r eval=FALSE}
+devtools::install_github("hrbrmstr/bismer")
+```
+
+```{r message=FALSE, warning=FALSE, error=FALSE, include=FALSE}
+options(width=120)
+```
+
+### Usage
+
+```{r message=FALSE, warning=FALSE, error=FALSE}
+library(bismer)
+
+# current verison
+packageVersion("bismer")
+
+purrr::walk(1:10, ~print(insult()))
+```
+
+### Test Results
+
+```{r message=FALSE, warning=FALSE, error=FALSE}
+library(bismer)
+library(testthat)
+
+date()
+
+test_dir("tests/")
+```
+
