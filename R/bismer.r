@@ -32,9 +32,13 @@ structure(list(c1 = c("artless", "bawdy", "beslubbering", "bootless",
 "c2", "c3")) -> insults
 
 #' Generate a random Shakespearean insult
+#'
+#' @md
+#' @param thou if `TRUE` then the insults are prefixed with "thou"
 #' @export
-insult <- function() {
-  sprintf("%s %s %s",
+insult <- function(thou=TRUE) {
+  sprintf("%s%s %s %s",
+          if (thou) "thou " else "",
           insults$c1[sample(length(insults$c1), 1)],
           insults$c2[sample(length(insults$c2), 1)],
           insults$c3[sample(length(insults$c3), 1)])

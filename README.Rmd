@@ -4,6 +4,8 @@ output: rmarkdown::github_document
 
 `bismer` : Generate Shakespearean insults
 
+Inspired by Dr. Vicky Forster (<a href="https://twitter.com/vickyyyf">@vickyyyf</a>) : <https://twitter.com/vickyyyf/status/846028898152431618>
+
 The following functions are implemented:
 
 - `insult`: Generate a Shakespearean insult
@@ -27,6 +29,8 @@ library(bismer)
 packageVersion("bismer")
 
 purrr::walk(1:10, ~print(insult()))
+
+purrr::walk(1:10, ~print(insult(thou=FALSE)))
 ```
 
 ### Test Results

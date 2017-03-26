@@ -4,7 +4,10 @@
 \alias{insult}
 \title{Generate a random Shakespearean insult}
 \usage{
-insult()
+insult(thou = TRUE)
+}
+\arguments{
+\item{thou}{if \code{TRUE} then the insults are prefixed with "thou"}
 }
 \description{
 Generate a random Shakespearean insult
