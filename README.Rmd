@@ -4,7 +4,7 @@ output: rmarkdown::github_document
 
 `bismer` : Generate Shakespearean insults
 
-Inspired by Dr. Vicky Forster (<a href="https://twitter.com/vickyyyf">@vickyyyf</a>) : <https://twitter.com/vickyyyf/status/846028898152431618>
+Inspired by Dr. Vicky Forster (<a href="https://twitter.com/vickyyyf">@vickyyyf</a>) : <https://twitter.com/vickyyyf/status/846028898152431618> and requested by Jeff Hollister (<a href="https://twitter.com/jhollist">@jhollist</a>).
 
 The following functions are implemented:
 

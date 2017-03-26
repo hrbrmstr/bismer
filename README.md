@@ -1,7 +1,7 @@
 
 `bismer` : Generate Shakespearean insults
 
-Inspired by Dr. Vicky Forster (<a href="https://twitter.com/vickyyyf">@vickyyyf</a>) : <https://twitter.com/vickyyyf/status/846028898152431618>
+Inspired by Dr. Vicky Forster (<a href="https://twitter.com/vickyyyf">@vickyyyf</a>) : <https://twitter.com/vickyyyf/status/846028898152431618> and requested by Jeff Hollister (<a href="https://twitter.com/jhollist">@jhollist</a>).
 
 The following functions are implemented:
 
@@ -28,31 +28,31 @@ packageVersion("bismer")
 purrr::walk(1:10, ~print(insult()))
 ```
 
-    ## [1] "thou infectious beef-witted ooxoomb"
-    ## [1] "thou puking tardy-gaited lewdster"
-    ## [1] "thou qualling guts-griping foot-licker"
-    ## [1] "thou venomed doghearted vassal"
-    ## [1] "thou churlish ill-breeding foot-licker"
-    ## [1] "thou craven clay-brained skainsmate"
-    ## [1] "thou clouted full-gorged mumble-news"
-    ## [1] "thou paunchy doghearted mammet"
-    ## [1] "thou venomed dizzy-eyed malt-worm"
-    ## [1] "thou roguish rough-hewn boar-pig"
+    ## [1] "thou puny beetle-headed death-token"
+    ## [1] "thou errant tickle-brained flap-dragon"
+    ## [1] "thou rank ill-breeding whey-face"
+    ## [1] "thou spleeny crook-pared pumpion"
+    ## [1] "thou errant milk-livered hugger-mugger"
+    ## [1] "thou tottering clay-brained haggard"
+    ## [1] "thou mewling fat-kidneyed bladder"
+    ## [1] "thou impertinent toad-spotted harpy"
+    ## [1] "thou droning dread-bolted baggage"
+    ## [1] "thou wayward unchin-snouted pumpion"
 
 ``` r
 purrr::walk(1:10, ~print(insult(thou=FALSE)))
 ```
 
-    ## [1] "craven reeling-ripe gudgeon"
-    ## [1] "impertinent milk-livered moldwarp"
-    ## [1] "paunchy guts-griping moldwarp"
-    ## [1] "spleeny guts-griping death-token"
-    ## [1] "mangled fly-bitten bum-bailey"
-    ## [1] "droning tickle-brained haggard"
-    ## [1] "mangled clay-brained pignut"
-    ## [1] "frothy pottle-deep horn-beast"
-    ## [1] "fawning rump-fed scut"
-    ## [1] "reeky hasty-witted haggard"
+    ## [1] "warped knotty-pated giglet"
+    ## [1] "warped tickle-brained flap-dragon"
+    ## [1] "dissembling beetle-headed giglet"
+    ## [1] "surly tardy-gaited miscreant"
+    ## [1] "surly dread-bolted pignut"
+    ## [1] "puking spur-galled boar-pig"
+    ## [1] "fobbing clay-brained mumble-news"
+    ## [1] "goatish dismal-dreaning codpiece"
+    ## [1] "beslubbering base-court death-token"
+    ## [1] "roguish boil-brained maggot-pie"
 
 ### Test Results
 
@@ -63,7 +63,7 @@ library(testthat)
 date()
 ```
 
-    ## [1] "Sun Mar 26 12:52:57 2017"
+    ## [1] "Sun Mar 26 12:55:05 2017"
 
 ``` r
 test_dir("tests/")
