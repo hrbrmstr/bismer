@@ -33,13 +33,52 @@ structure(list(c1 = c("artless", "bawdy", "beslubbering", "bootless",
 
 #' Generate a random Shakespearean insult
 #'
+#' With this function thee can gen'rate a plain three-element æfþanc, one prefix'd with
+#' "thou", and completeth fracoþ sentences with varying punctuation.
+#'
 #' @md
 #' @param thou if `TRUE` then the insults are prefixed with "thou"
+#' @param sentence if `TRUE` then the insults are prefixed with "Thou art a" and end with
+#'        punctuation. See `exclaim` for how to specify which punctuation. The value of
+#'        `sentence` overrides `thou`.
+#' @param exclaim if `TRUE` and `sentence` == `TRUE` then the generated sentence will be
+#'        ended with a "!" else it shall be ended with a ".". This parameter is ignored
+#'        if `sentence` is `FALSE`.
 #' @export
-insult <- function(thou=TRUE) {
-  sprintf("%s%s %s %s",
-          if (thou) "thou " else "",
-          insults$c1[sample(length(insults$c1), 1)],
-          insults$c2[sample(length(insults$c2), 1)],
-          insults$c3[sample(length(insults$c3), 1)])
+insult <- function(thou=TRUE, sentence=FALSE, exclaim=TRUE) {
+
+  prefix <- ""
+
+  beration <- sprintf("%s %s %s",
+                      insults$c1[sample(length(insults$c1), 1)],
+                      insults$c2[sample(length(insults$c2), 1)],
+                      insults$c3[sample(length(insults$c3), 1)])
+
+  if (thou || sentence) prefix <- if (sentence) "Thou art a " else "thou "
+
+  if (sentence) {
+    is_vowel <- substr(beration, 1, 1) %in% c("a", "e", "i", "o", "u")
+    if (is_vowel) prefix <-  gsub("a $", "an ", prefix)
+    beration <- sprintf("%s%s", beration, if (exclaim) "!" else ".")
+  }
+
+  sprintf("%s%s", prefix, beration)
+
 }
+
+#' @rdname insult
+#' @export
+gehornian <- insult
+
+
+#' @rdname insult
+#' @export
+híenan <- insult
+
+#' @rdname insult
+#' @export
+misgrétan <- insult
+
+#' @rdname insult
+#' @export
+scendan <- insult

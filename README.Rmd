@@ -10,6 +10,15 @@ The following functions are implemented:
 
 - `insult`: Generate a Shakespearean insult
 
+The `insult()` function is aliased to 
+
+- `gehornian`
+- `híenan`
+- `misgrétan`
+- `scendan`
+
+for those who want to go "all-in" on the Shakespeare thing.
+
 ### Installation
 
 ```{r eval=FALSE}
@@ -31,16 +40,8 @@ packageVersion("bismer")
 purrr::walk(1:10, ~print(insult()))
 
 purrr::walk(1:10, ~print(insult(thou=FALSE)))
+
+purrr::walk(1:10, ~print(insult(sentence=TRUE)))
+
+purrr::walk(1:10, ~print(insult(sentence=TRUE, exclaim=FALSE)))
 ```
-
-### Test Results
-
-```{r message=FALSE, warning=FALSE, error=FALSE}
-library(bismer)
-library(testthat)
-
-date()
-
-test_dir("tests/")
-```
-

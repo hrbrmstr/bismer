@@ -8,6 +8,7 @@ Maintainer: Bob Rudis <bob@rud.is>
 Description: Shakespearean insult generator
 URL: https://github.com/hrbrmstr/bismer
 BugReports: https://github.com/hrbrmstr/bismer/issues
+Encodig: UTF-8
 License: AGPL
 Suggests:
     testthat, covr

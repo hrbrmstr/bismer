@@ -2,13 +2,34 @@
 % Please edit documentation in R/bismer.r
 \name{insult}
 \alias{insult}
+\alias{gehornian}
+\alias{híenan}
+\alias{misgrétan}
+\alias{scendan}
 \title{Generate a random Shakespearean insult}
 \usage{
-insult(thou = TRUE)
+insult(thou = TRUE, sentence = FALSE, exclaim = TRUE)
+
+gehornian(thou = TRUE, sentence = FALSE, exclaim = TRUE)
+
+híenan(thou = TRUE, sentence = FALSE, exclaim = TRUE)
+
+misgrétan(thou = TRUE, sentence = FALSE, exclaim = TRUE)
+
+scendan(thou = TRUE, sentence = FALSE, exclaim = TRUE)
 }
 \arguments{
 \item{thou}{if \code{TRUE} then the insults are prefixed with "thou"}
+
+\item{sentence}{if \code{TRUE} then the insults are prefixed with "Thou art a" and end with
+punctuation. See \code{exclaim} for how to specify which punctuation. The value of
+\code{sentence} overrides \code{thou}.}
+
+\item{exclaim}{if \code{TRUE} and \code{sentence} == \code{TRUE} then the generated sentence will be
+ended with a "!" else it shall be ended with a ".". This parameter is ignored
+if \code{sentence} is \code{FALSE}.}
 }
 \description{
-Generate a random Shakespearean insult
+With this function thee can gen'rate a plain three-element æfþanc, one prefix'd with
+"thou", and completeth fracoþ sentences with varying punctuation.
 }
